@@ -19,3 +19,5 @@
 git clone https://github.com/messense/aliyundrive-webdav package/messense
 git clone https://github.com/gdy666/luci-app-lucky package/lucky
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
+git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
