@@ -30,3 +30,4 @@ git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/l
 rm -f feeds/packages/net/tailscale/Makefile
 wget -P feeds/packages/net/tailscale https://github.com/immortalwrt/packages/raw/refs/heads/openwrt-24.10/net/tailscale/Makefile
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
