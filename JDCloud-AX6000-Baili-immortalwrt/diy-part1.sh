@@ -20,6 +20,8 @@
 git clone https://github.com/gdy666/luci-app-lucky package/lucky
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
-sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+rm -f feeds/packages/net/tailscale/Makefile
+wget -P feeds/packages/net/tailscale https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/Makefile
+# sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone --depth=1 https://github.com/kenzok8/small package/small
