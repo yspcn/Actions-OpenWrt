@@ -25,3 +25,12 @@ rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
 sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 ##-----------------Manually set CPU frequency for MT7986A-----------------
 sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="2.0GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+rm -f feeds/packages/net/tailscale/Makefile && rm -f feeds/packages/net/tailscale/files/tailscale.init
+wget -P feeds/packages/net/tailscale https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/Makefile
+wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.helper
+wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.init
+wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.iface
+# sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
