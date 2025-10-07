@@ -26,5 +26,4 @@ wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/ra
 wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.init
 wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.iface
 # sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-git clone --depth=1 https://github.com/kenzok8/small package/small
+git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
