@@ -41,7 +41,7 @@ on:
       EEPROM:
         description: 'Use nx30pro eeprom and fixed WiFi MAC address'
         required: true
-        default: true
+        default: false
         type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
