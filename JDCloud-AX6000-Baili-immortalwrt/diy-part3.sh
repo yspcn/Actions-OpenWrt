@@ -28,3 +28,6 @@ sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 # rm -rf feeds/packages/utils/v2dat
 # rm -rf feeds/packages/lang/golang
 # git clone https://github.com/kenzok8/golang -b 1.25 feeds/packages/lang/golang
+sudo apt install libfuse-dev
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
