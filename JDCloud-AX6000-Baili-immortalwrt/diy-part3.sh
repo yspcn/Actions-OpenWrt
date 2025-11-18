@@ -31,4 +31,4 @@ sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 sudo apt install libfuse-dev
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
-sed -i '/1ee560498e1a047b329eab3dad8425ae51e7f0527e4495efb99481ca11206b37/3039d73b167c41025b1b401b647743b9c6d786613c693eef34de325b30de6d47/g' package/network/utils/ebtables/Makefile
+sed -i 's/1ee560498e1a047b329eab3dad8425ae51e7f0527e4495efb99481ca11206b37/3039d73b167c41025b1b401b647743b9c6d786613c693eef34de325b30de6d47/g' package/network/utils/ebtables/Makefile
