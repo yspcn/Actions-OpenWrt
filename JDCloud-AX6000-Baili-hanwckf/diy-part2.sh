@@ -15,7 +15,7 @@
 ##-----------------Del duplicate packages------------------
 rm -rf feeds/packages/net/open-app-filter
 ##-----------------Add OpenClash dev core------------------
-curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
+curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
 tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 chmod +x /tmp/clash >/dev/null 2>&1
 mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
@@ -27,10 +27,6 @@ sed -i '/myddns_ipv4/,$d' feeds/packages/net/ddns-scripts/files/etc/config/ddns
 sed -i '/"mediatek"\/\*|\"mvebu"\/\*/{n; s/.*/\tcpu_freq="2.0GHz" ;;/}' package/emortal/autocore/files/generic/cpuinfo
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
-rm -f feeds/packages/net/tailscale/Makefile && rm -f feeds/packages/net/tailscale/files/tailscale.init
-wget -P feeds/packages/net/tailscale https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/Makefile
-wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.helper
-wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.init
-wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.iface
-# sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+
+sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
 git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
