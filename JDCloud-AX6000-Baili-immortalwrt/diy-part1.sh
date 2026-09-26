@@ -23,9 +23,5 @@ git clone https://github.com/gdy666/luci-app-lucky package/lucky
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale package/luci-app-tailscale
-wget -P feeds/packages/net/tailscale https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/Makefile
-wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.helper
-wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.init
-wget -P feeds/packages/net/tailscale/files https://github.com/asvow/neo-addon/raw/refs/heads/main/tailscale/files/tailscale.iface
-# sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+
 git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
